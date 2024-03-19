@@ -6,10 +6,14 @@
 
 </head> 
 <body>
-
+<script>
+function myFunction(element, color) {
+  element.style.color = color;
+}
+</script>
 <P> this is a test </p> 
 
-< button > click me </button> 
+<button onclick="myFunction(this,blue)">Click me</button>
 
 </body>
 </html>
