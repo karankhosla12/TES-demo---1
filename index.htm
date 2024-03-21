@@ -27,26 +27,22 @@ function myFunction(element, color) {
 </script>
 <P> this is a test </p> 
 
-  <form id="redirectForm" action="https://karankhosla12.github.io/TES-demo---1/" method="get">
-      <input type="email" id="email" name="email_var" placeholder="Enter your email">
-
-  <button type="submit" value="Submit" onclick="redirectToOriginalPage()"> Submit </button>
+<form id="emailForm">
+  <input type="email" id="email_var" name="email_var" placeholder="Enter your email">
+  <input type="button" value="Submit" onclick="submitEmail()">
 </form>
 
+<div id="submittedEmail"></div>
+
 <script>
-  function redirectToOriginalPage() {
-    document.getElementById("redirectForm").submit();
+  function submitEmail() {
+    var email = document.getElementById("email").value;
+    document.getElementById("submittedEmail").innerText = "Email submitted: " + email;
     lintrk("setUserData", { email: "email_var" }); 
 
 
   }
-  
-
-<button onclick="myFunction(this,'blue')">Click me</button>
-
-<br> 
-  <br> 
-     <script>
+</script>
 function myFunction1(){
 
   window.lintrk('track', { conversion_id: 10814657 })
