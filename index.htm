@@ -27,9 +27,9 @@ function myFunction(element, color) {
 </script>
 <P> this is a test </p> 
 
-<form id="emailForm">
+<form id="emailForm" action="javascript:void(0);" onsubmit="submitEmail(); return false;">
   <input type="email" name="email_var" placeholder="Enter your email">
-  <button value="Submit" onclick="submitEmail()"> Submit </button>
+  <input type="submit" value="Submit">
 </form>
 
 <div id="submittedEmail"></div>
@@ -38,7 +38,7 @@ function myFunction(element, color) {
   function submitEmail() {
     var email = document.getElementsByName("email_var")[0].value;
     document.getElementById("submittedEmail").innerText = "Email submitted: " + email;
-   lintrk("setUserData", { email: "email_var" }); 
+    lintrk("setUserData", { email: "email" }); 
 
   }
 </script>
